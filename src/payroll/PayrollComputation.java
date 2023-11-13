@@ -5,26 +5,20 @@ import java.util.Scanner;
 public class PayrollComputation {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
 		System.out.print("ENTER THE EMPLOYEE NO TO GENERATE PAYSLIP: ");
-		Scanner employeeNo = new Scanner(System.in);
-		String employeeNumber = employeeNo.next();
+		String employeeNumber = in.next();
 
 		System.out.println("ENTER THE EMPLOYEE NAME");
-		Scanner employeeNa = new Scanner(System.in);
-		String employeeName = employeeNa.nextLine();
+		String employeeName = in.next();
 		System.out.println("ENTER THE EMPLOYEE DESIGNATION");
-		Scanner design = new Scanner(System.in);
-		String designation = design.nextLine();
+		String designation = in.next();
 		System.out.println("ENTER THE NUMBER OF DAYS WORKED");
-		Scanner workDays = new Scanner(System.in);
-		int daysWorked = workDays.nextInt();
+		int daysWorked = in.nextInt();
 		System.out.println("ENTER THE PAY RATE");
-		Scanner rate = new Scanner(System.in);
-		double payRate = rate.nextDouble();
+		double payRate = in.nextDouble();
 		System.out.println("ENTER THE GENERATION DATE");
-		Scanner date = new Scanner(System.in);
-		String generationDate = date.nextLine();
+		String generationDate = in.next();
 		
 		double basicPay = daysWorked * payRate;
 		double pF = basicPay / 10;
@@ -61,6 +55,7 @@ public class PayrollComputation {
 		System.out.print("\t\t\t\t\t\tNET PAY " );
 		System.out.println("\t\t" + (int)netPay);
 		System.out.println("______________________________________________________________________________________");
+		in.close();
 	}
 
 	}
