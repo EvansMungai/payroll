@@ -1,4 +1,4 @@
-# payroll
+# Payroll Computation System
 
 This is a sample Java program that is meant to aid in payroll computation
 
